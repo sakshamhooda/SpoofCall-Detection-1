@@ -1,0 +1,26 @@
+model:
+  # CNN parameters
+  input_channels: 1
+  hidden_channels: 32
+  
+  # LSTM parameters
+  input_size: 128
+  hidden_size: 256
+  num_layers: 2
+  dropout: 0.5
+  
+  # GAN parameters
+  num_domains: 5  # For StarGAN
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  num_epochs: 100
+  early_stopping_patience: 5
+
+data:
+  sample_rate: 16000
+  duration: 5  # seconds
+  frame_count: 32  # for video
+  train_split: 0.8
+  num_workers: 4
